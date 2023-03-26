@@ -34,7 +34,9 @@
             <li class="item">
               <a class="nav link" href="./portfolio.html">Portfolio</a>
             </li>
-            <li class="item"><a class="nav link" href="">Contacts</a></li>
+            <li class="item">
+              <a class="nav link" href="">Contacts</a>
+            </li>
           </ul>
         </nav>
 
@@ -61,7 +63,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="section-title">Effective Solutions for Your Business</h1>
-          <button class="btn btn-primary" type="button">Order Service</button>
+          <button class="btn btn-primary" data-modal-open type="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -431,32 +435,24 @@
             <li class="social-media-item">
               <a href="" class="link">
                 <svg class="icon" width="24" height="24">
-                  <use href="./images/icons.svg#linkedin"></use>
+                  <use href=""></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-
-        <!--<ul class="team-soc-list list">
-              <li class="team-soc-item">
-                <a href="" class="team-soc-link link">
-                  <svg width="20" height="20" class="team-soc-icon">
-                    <use href=""></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="team-soc-item">
-                <a href="" class="team-soc-link link"></a>
-              </li>
-              <li class="team-soc-item">
-                <a href="" class="team-soc-link link"></a>
-              </li>
-              <li class="team-soc-item">
-                <a href="" class="team-soc-link link"></a>
-              </li>
-            </ul>-->
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-x1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
