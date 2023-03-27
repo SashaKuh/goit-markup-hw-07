@@ -62,6 +62,7 @@ img {
 
 .link {
     text-decoration: none;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.logo {
@@ -175,7 +176,7 @@ button{
 
 .nav.link:is(:hover, :focus) {
     color: #404BBF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .address-container {
@@ -205,7 +206,7 @@ button{
 
 .contact.link:is(:hover, :focus) {
     color: #404BBF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .link.current {
@@ -263,12 +264,14 @@ button{
 
     margin-top: 48px;
     padding: 16px 32px;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero .btn:is(:hover, :focus) {
     color:#FFF;
     background-color: #404BBF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /*? --- PHOTO --- */
@@ -373,6 +376,8 @@ button{
 
     padding: 12px;
     height: 40px;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-links .icon {
@@ -383,7 +388,7 @@ button{
 
 .card-links .link:is(:hover, :focus) {
     background-color: #404BBF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /*? --- FOOTER --- */
@@ -441,6 +446,8 @@ button{
     height: 40px;
     padding: 8px;
     color: #F4F4FD;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-item .icon {
@@ -451,7 +458,7 @@ button{
 
 .social-media-item .link:is(:hover, :focus) {
     background: #31D0AA;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .footer-soc{
@@ -499,6 +506,8 @@ button{
     border-radius: 4px;
     padding: 16px 32px;
     color: #8E8F99;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item .icon {
@@ -510,7 +519,7 @@ button{
 .customers-item .link:is(:hover, :focus) {
     border-color: #404BBF;
     color: #404BBF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /*? --- PORTFOLIO --- */
@@ -538,13 +547,15 @@ button{
     border: 1px solid #E7E9FC;
 
     padding: 12px 24px;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btns .btn:is(:hover, :focus) {
     color: #FFF;
     background-color: #404BBF;
     border-color: transparent;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -571,10 +582,11 @@ button{
 
 .portfolio .card {
     width: 360px;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio .card:is(:hover, :focus) {
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     width: 360px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -617,10 +629,12 @@ button{
     padding-top: 40px;
     padding-left: 32px;
     padding-right: 32px;
+
+    
 }
 
 .team-list-link-wrapper:is(:hover, :focus) .overlay{
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     transform: translate(0, 0);
     
     
@@ -667,17 +681,23 @@ button{
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     margin-left: auto;
+
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:is(:hover, :focus){
     background: #404BBF;
     border: 1px solid #404BBF;
+    
+}
+
+.modal-close-btn-icon{
     transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:is(:hover, :focus) .modal-close-btn-icon{
     fill: #FFF;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .is-hidden{
