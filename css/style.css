@@ -4,7 +4,8 @@
 :root{
     --grad: linear-gradient(rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)
-    )
+    );
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 
@@ -62,7 +63,7 @@ img {
 
 .link {
     text-decoration: none;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .link.logo {
@@ -265,7 +266,7 @@ button{
     margin-top: 48px;
     padding: 16px 32px;
 
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .hero .btn:is(:hover, :focus) {
@@ -377,7 +378,7 @@ button{
     padding: 12px;
     height: 40px;
 
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .card-links .icon {
@@ -402,6 +403,7 @@ button{
 
 .footer .container {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer .logo {
@@ -447,7 +449,7 @@ button{
     padding: 8px;
     color: #F4F4FD;
 
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .social-media-item .icon {
@@ -463,6 +465,7 @@ button{
 
 .footer-soc{
     margin-left: 120px; 
+    margin-bottom: 30px;
 }
 
 .footer-soc-list-list{
@@ -480,6 +483,113 @@ button{
     padding: 32px 16px;
 }
     
+.footer-form{
+    display: flex;
+    
+    margin: auto;
+
+    
+}
+
+.footer-form-input-desc{
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
+    color: #FFFFFF;
+
+    font-weight: 400;
+}
+
+.footer-form-input{
+    width: 264px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: border-color var(--transition);
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: transparent;
+}
+
+.footer-form-input:focus{
+    outline: none;
+    border-color: #4D5AE5;
+}
+
+.footer-form-submit{
+    
+    
+    color: #FFF;
+    background: #4D5AE5;
+    
+    border-radius: 4px;
+
+    border-color: transparent;
+    
+    align-self: center;
+
+    min-width: 169px;
+    min-height: 26px;
+    padding: 8px 64px 8px 24px;
+
+    transition:  var(--transition);
+
+    margin-left: 24px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    position: relative;
+    
+}
+
+.footer-form-but-icon{
+    
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+
+}
+
+.footer-form-icon{
+    position: absolute;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    margin-right: 24px;
+    margin-left: 16px;
+    
+}
+
+.footer-form-submit:is(:hover, :focus) {
+    color:#FFF;
+    background-color: #404BBF;
+    
+}
+
+
+
 
 
 /*? --- CUSTOMERS --- */
@@ -507,7 +617,7 @@ button{
     padding: 16px 32px;
     color: #8E8F99;
 
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .customers-item .icon {
@@ -548,7 +658,7 @@ button{
 
     padding: 12px 24px;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
 }
 
 .filter-btns .btn:is(:hover, :focus) {
@@ -582,7 +692,7 @@ button{
 
 .portfolio .card {
     width: 360px;
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .portfolio .card:is(:hover, :focus) {
@@ -616,7 +726,7 @@ button{
     height: 100%;
     /*overflow-y: scroll;*/
     transform: translate(0, 100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition);
 
     font-size: 14px;
     color: #FFF;
@@ -648,20 +758,21 @@ button{
     width: 100%;
     height: 100%;
     background-color: rgba(48, 48, 48, 0.445);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--transition), visibility 2var(--transition);
     
 }
 
 .modal{
-    width: 500px;
-    min-height: 500px;
+
+    width: 408px;
+    min-height: 584px;
     background-color: #FFF;
     border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition);
     padding: 24px;
 }
 
@@ -682,7 +793,7 @@ button{
     padding: 0;
     margin-left: auto;
 
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .modal-close-btn:is(:hover, :focus){
@@ -692,7 +803,7 @@ button{
 }
 
 .modal-close-btn-icon{
-    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:  var(--transition);
 }
 
 .modal-close-btn:is(:hover, :focus) .modal-close-btn-icon{
@@ -708,4 +819,166 @@ button{
 
 .no-scroll{
     overflow: hidden;
+}
+
+
+/******!FORM******/
+
+.form-title{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color var(--transition);
+}
+
+.modal-form-input:focus{
+    outline: none;
+    border-color: #4D5AE5;
+}
+
+.modal-form-input-desc{
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 7px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    
+}
+
+.modal-form-field{
+    margin-bottom: 8px;
+}
+
+.modal-form-wrapper{
+    display: block;
+    position: relative;
+}
+
+.modal-form-input-icons{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: background-color var(--transition);
+
+    display: block;   
+    
+}
+
+.modal-form-input:focus + .modal-form-input-icons{
+    fill: #4D5AE5;
+}
+
+.modal-form-massage{
+    width: 100%;
+    height: 100px;
+    padding: 10px 16px;
+    resize: none;
+    transition: border-color var(--transition);
+    border-radius: 4px;
+
+    
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    
+
+}
+
+.modal-form-massage:focus{
+    outline: none;
+    border-color: #4D5AE5;
+}
+
+
+
+.modal-form-check-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    color: #757575;
+
+}
+
+.modal-form-check-desc::before {
+    display: block;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    content: '';
+    cursor: pointer;
+}
+  
+  .modal-form-check:checked + .modal-form-check-desc::before {
+    background-image: url('../css/vector.svg');
+    background-color: #404BBF;
+    border-radius: 2px;
+    border: 1.25px solid #404BBF;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;    
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before{
+    outline: 1.25px solid #4D5AE5;
+}
+
+.modal-form-submit{
+        
+    color: #FFF;
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    border-color: transparent;
+    
+    align-self: center;
+
+    min-width: 169px;
+    min-height: 26px;
+    padding: 16px 32px 16px 32px;
+
+    transition:  var(--transition);
+}
+
+.modal-form-submit:is(:hover, :focus) {
+    color:#FFF;
+    background-color: #404BBF;
+    
 }
